@@ -1,0 +1,49 @@
+You will get the description of a workspace and you need to construct the corresponding transition systems.
+
+Possible TS types:
+2d_pose_region (2D pose [[x,y], phi] with euler angle orientation)
+3d_point_region (3D point [x, y, z] without orientation)
+2d_point_region (2D point [x, y] without orientation)
+turtlebot_load
+
+Transition System 1:
+There are 4 states with (x,y) coordinates: 
+r1: (0,0)
+r2: (0,1)
+r3: (0,2)
+r4: (1,0)
+r5: (1,1)
+r6: (1,2)
+
+Initial state: r2
+
+The feasible actions are moves between the 4 states and show what states are connected to each other.
+Beware of the direction of each move. The feasible actions are:
+Go from r1 to r2
+Go from r1 to r4
+Go from r2 to r1
+Go from r2 to r3
+Go from r2 to r5
+Go from r3 to r2
+Go from r3 to r6
+Go from r4 to r1
+Go from r4 to r5
+Go from r5 to r2
+Go from r5 to r4
+Go from r5 to r6
+Go from r6 to r3
+Go from r6 to r5
+
+Transition System 2:
+There are 2 available states:
+loaded
+unloaded
+
+Initial state: unloaded
+
+Feasible actions:
+Pick box (when in r2)
+Drop box (when in r6)
+
+Skip the repetition of the instruction I gave you. Follow the format given in the example transition system below. 
+An example transition system is given here:
